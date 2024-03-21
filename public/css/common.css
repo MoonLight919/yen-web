@@ -1,0 +1,33 @@
+body{
+    height: 100vh;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    background-color:#6b7280 !important;
+    font-family: 'Raleway Thin' !important;
+}
+
+.navbar-brand img{
+    width: 100px;
+    height: auto;
+}
+
+.navbar-collapse {
+    flex-grow: 0 !important;
+}
+
+#main{
+    height: 100vh;
+}
+
+h1{
+    color: white !important;
+}
+
+hr{
+    border-top: 1px solid white !important;
+}
+
+.form-check label{
+    color: white !important;
+}

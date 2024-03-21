@@ -28,7 +28,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/static', express.static(path.join(__dirname, 'public')));
-//app.use(favicon(path.join(__dirname,'public','images','favicon.jpg')));
+app.use(favicon(path.join(__dirname,'public','assets','favicon.ico')));
 global.mode = 'prod';
 
 app.use('/', commonRouter);
