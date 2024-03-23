@@ -1,6 +1,5 @@
 $('#authorize').on('click', (e) => {
     e.preventDefault();
-    clearErrors();
     var button = this;
     button.disabled = true;
     var passwordlessOptions = {
