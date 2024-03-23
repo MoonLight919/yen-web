@@ -6,7 +6,7 @@ $('#authorize').on('click', (e) => {
         allowedConnections: ['sms'],
         passwordlessMethod: 'code',
         auth: {
-            redirectUrl: 'https://www.yenebezpeka.pp.ua',
+            redirectUrl: 'https://www.yenebezpeka.pp.ua/loading',
             audience: "https://yen-api",
         }
     }

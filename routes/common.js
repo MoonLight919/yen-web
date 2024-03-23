@@ -23,4 +23,8 @@ router.get('/authorize', function(req, res, next) {
   sender.sendPage(res, 'authorize');
 });
 
+router.get('/loading', function(req, res, next) {
+  sender.sendPage(res, 'loading');
+});
+
 module.exports = router;
