@@ -28,6 +28,14 @@ hr{
     border-top: 1px solid white !important;
 }
 
-.form-check label{
+.container {
     color: white !important;
+}
+
+.box-with-border{
+    border: thin solid white;
+}
+
+.box-with-border li img{
+    width: 2%;
 }
