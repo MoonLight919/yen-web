@@ -16,7 +16,14 @@
 		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
 		crossorigin="anonymous" defer>
 	</script>
+	<script 
+		src="https://code.jquery.com/jquery-3.7.1.min.js" 
+		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+		crossorigin="anonymous"
+		defer>
+	</script>
 	<script src="../scripts/common.js" defer></script>
+	<script src="../scripts/ip.js" defer></script>
 </head>
 <body>
 	<div id="main" class="d-flex flex-column">
@@ -61,8 +68,9 @@
 			</div>
 		</nav>
 		<iframe
+			id="air-quality-map"
 			class="flex-grow-1 w-100"
-			src="https://www.iqair.com/air-quality-map?lat=50.4916301&lng=30.5913925&zoomLevel=10">
+			src="https://www.iqair.com/air-quality-map">
 		</iframe>
 	</div>
 </body>
