@@ -24,6 +24,7 @@
 	</script>
 	<script src="../scripts/profile.js" defer></script>
 	<script src="../scripts/common.js" defer></script>
+	<script src="../scripts/ip.js" defer></script>
 </head>
 <body>
 	<div id="main" class="d-flex flex-column">
@@ -89,8 +90,8 @@
 					<hr class="mb-5">
 					<div class="card text-bg-light" style="max-width: 18rem;">
 						<div class="card-header">IP Address</div>
-						<div class="card-body">
-							<div class="text-center">
+						<div id="current-ip-address" class="card-body">
+							<div  class="text-center">
 								<div class="spinner-border" role="status">
 									<span class="visually-hidden">Loading...</span>
 								</div>
@@ -101,7 +102,7 @@
 					</div>
 					<div class="card text-bg-light" style="max-width: 18rem;">
 						<div class="card-header">Current location</div>
-						<div class="card-body">
+						<div id="current-location" class="card-body">
 							<div class="text-center">
 								<div class="spinner-border" role="status">
 									<span class="visually-hidden">Loading...</span>
@@ -113,7 +114,7 @@
 					</div>
 					<div class="card text-bg-light" style="max-width: 18rem;">
 						<div class="card-header">Current coordinates</div>
-						<div class="card-body">
+						<div id="current-coordinates" class="card-body">
 							<div class="text-center">
 								<div class="spinner-border" role="status">
 									<span class="visually-hidden">Loading...</span>
@@ -128,7 +129,16 @@
 					<h1>Default Information</h1>
 					<hr class="mb-5">
 					<div class="card text-bg-light" style="max-width: 18rem;">
-						<div class="card-header">Phone number</div>
+						<div class="card-header d-flex justify-content-between align-items-center">
+							Phone number
+							<button id="test-phone-number" type="button" class="btn btn-outline-dark">
+								Test
+							</button>
+							<button id="test-phone-number-loading" type="button" class="btn btn-outline-dark" disabled>
+								<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+  								<span role="status">Sending...</span>
+							</button>
+						</div>
 						<div class="card-body">
 						<h5 class="card-title">+38 (095) 218-21-54</h5>
 						</div>

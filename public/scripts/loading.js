@@ -22,7 +22,7 @@ $(document).ready(function() {
         window.location.href = "https://www.yenebezpeka.pp.ua";
       },
       error: function(xhr, status, error) {
-        console.error('Error:', error);
+        console.error('Error:', xhr.responseJSON);
       }
     });
   });
