@@ -132,9 +132,7 @@
 					<div class="card text-bg-light" style="max-width: 18rem;">
 						<div class="card-header d-flex justify-content-between align-items-center">
 							Phone number
-							<button id="test-phone-number" type="button" class="btn btn-outline-dark">
-								Test
-							</button>
+							<button id="test-phone-number" type="button" class="btn btn-outline-dark">Test</button>
 							<button id="test-phone-number-loading" type="button" class="btn btn-outline-dark" disabled>
 								<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
   								<span role="status">Sending...</span>
@@ -159,9 +157,12 @@
 				</div>
 			</div>
 			<div id="alerts-in-ua">
-				<div class="form-check form-switch d-flex align-items-center mb-3">
-					<input class="form-check-input me-3" type="checkbox" role="switch" id="alerts-in-ua-notification">
-					<label class="form-check-label fs-3" for="alerts-in-ua-notification">Air raid alerts notifications</label>
+				<div class="form-check form-switch d-flex align-items-center justify-content-between mb-3">
+					<div class="d-flex align-items-center">
+						<input class="form-check-input me-3" type="checkbox" role="switch" id="alerts-in-ua-notification">
+						<label class="form-check-label fs-3" for="alerts-in-ua-notification">Air raid alerts notifications</label>
+					</div>
+					<button type="button" class="btn btn-outline-light">Send notification with current information</button>
 				</div>
 				<div class="mb-5">
 					<div class="form-check d-flex align-items-center">
@@ -181,9 +182,12 @@
 			</div>
 			<div id="iqair">
 				<div class="box-with-border p-5 mb-3">
-					<div class="form-check form-switch d-flex align-items-center mb-3">
-						<input class="form-check-input me-3" type="checkbox" role="switch" id="air-quality-notification">
-						<label class="form-check-label fs-3" for="air-quality-notification">Air quality notifications</label>
+					<div class="form-check form-switch d-flex align-items-center justify-content-between mb-3">
+						<div class="d-flex align-items-center">
+							<input class="form-check-input me-3" type="checkbox" role="switch" id="air-quality-notification">
+							<label class="form-check-label fs-3" for="air-quality-notification">Air quality notifications</label>
+						</div>
+						<button type="button" class="btn btn-outline-light">Send notification with current information</button>
 					</div>
 					<div>
 						<label for="air-quality-notification-trigger-value" class="form-label">Air quality trigger value</label>
@@ -199,9 +203,12 @@
 					</div>
 				</div>
 				<div class="box-with-border p-5 mb-3">
-					<div class="form-check form-switch d-flex align-items-center mb-3">
-						<input class="form-check-input me-3" type="checkbox" role="switch" id="air-temperature-notification">
-						<label class="form-check-label fs-3" for="air-temperature-notification">Air temperature notifications</label>
+					<div class="form-check form-switch d-flex align-items-center justify-content-between mb-3">
+						<div class="d-flex align-items-center">
+							<input class="form-check-input me-3" type="checkbox" role="switch" id="air-temperature-notification">
+							<label class="form-check-label fs-3" for="air-temperature-notification">Air temperature notifications</label>
+						</div>
+						<button type="button" class="btn btn-outline-light">Send notification with current information</button>
 					</div>
 					<div>
 						<label for="air-temperature-notification-trigger-value" class="form-label">Air Temperature trigger value</label>
@@ -210,9 +217,12 @@
 					</div>
 				</div>
 				<div class="box-with-border p-5 mb-3">
-					<div class="form-check form-switch d-flex align-items-center mb-3">
-						<input class="form-check-input me-3" type="checkbox" role="switch" id="atmospheric-pressure-notification">
-						<label class="form-check-label fs-3" for="atmospheric-pressure-notification">Atmospheric pressure notifications</label>
+					<div class="form-check form-switch d-flex align-items-center justify-content-between mb-3">
+						<div class="d-flex align-items-center">
+							<input class="form-check-input me-3" type="checkbox" role="switch" id="atmospheric-pressure-notification">
+							<label class="form-check-label fs-3" for="atmospheric-pressure-notification">Atmospheric pressure notifications</label>
+						</div>
+						<button type="button" class="btn btn-outline-light">Send notification with current information</button>
 					</div>
 					<div>
 						<label for="atmospheric-pressure-notification-trigger-value" class="form-label">Atmospheric pressure trigger value</label>
@@ -226,9 +236,12 @@
 					</div>
 				</div>
 				<div class="box-with-border p-5 mb-3">
-					<div class="form-check form-switch d-flex align-items-center mb-3">
-						<input class="form-check-input me-3" type="checkbox" role="switch" id="humidity-notification">
-						<label class="form-check-label fs-3" for="humidity-notification">Humidity notifications</label>
+					<div class="form-check form-switch d-flex align-items-center justify-content-between mb-3">
+						<div class="d-flex align-items-center">
+							<input class="form-check-input me-3" type="checkbox" role="switch" id="humidity-notification">
+							<label class="form-check-label fs-3" for="humidity-notification">Humidity notifications</label>
+						</div>
+						<button type="button" class="btn btn-outline-light">Send notification with current information</button>
 					</div>
 					<div>
 						<label for="humidity-notification-trigger-value" class="form-label">Humidity trigger value</label>
@@ -237,9 +250,12 @@
 					</div>
 				</div>
 				<div class="box-with-border p-5 mb-3">
-					<div class="form-check form-switch d-flex align-items-center mb-3">
-						<input class="form-check-input me-3" type="checkbox" role="switch" id="wind-speed-notification">
-						<label class="form-check-label fs-3" for="wind-speed-notification">Wind speed notifications</label>
+					<div class="form-check form-switch d-flex align-items-center justify-content-between mb-3">
+						<div class="d-flex align-items-center">
+							<input class="form-check-input me-3" type="checkbox" role="switch" id="wind-speed-notification">
+							<label class="form-check-label fs-3" for="wind-speed-notification">Wind speed notifications</label>
+						</div>
+						<button type="button" class="btn btn-outline-light">Send notification with current information</button>
 					</div>
 					<div>
 						<label for="wind-speed-notification-trigger-value" class="form-label">Wind speed trigger value</label>
@@ -263,9 +279,12 @@
 					</div>
 				</div>
 				<div class="box-with-border p-5 mb-3">
-					<div class="form-check form-switch d-flex align-items-center mb-3">
-						<input class="form-check-input me-3" type="checkbox" role="switch" id="wind-speed-notification">
-						<label class="form-check-label fs-3" for="wind-speed-notification">Weather notifications</label>
+					<div class="form-check form-switch d-flex align-items-center justify-content-between mb-3">
+						<div class="d-flex align-items-center">
+							<input class="form-check-input me-3" type="checkbox" role="switch" id="wind-speed-notification">
+							<label class="form-check-label fs-3" for="wind-speed-notification">Weather notifications</label>
+						</div>
+						<button type="button" class="btn btn-outline-light">Send notification with current information</button>
 					</div>
 					<div>
 						<label for="weather-notification-trigger-type" class="form-label">Weather trigger type</label>
