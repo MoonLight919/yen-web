@@ -162,7 +162,11 @@
 						<input class="form-check-input me-3" type="checkbox" role="switch" id="alerts-in-ua-notification">
 						<label class="form-check-label fs-3" for="alerts-in-ua-notification">Air raid alerts notifications</label>
 					</div>
-					<button type="button" class="btn btn-outline-light">Send notification with current information</button>
+					<button id="alerts-in-ua-test" type="button" class="btn btn-outline-light">Send notification with current information</button>
+					<button id="alerts-in-ua-test-loading" type="button" class="btn btn-outline-light" disabled>
+						<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+						<span role="status">Sending...</span>
+					</button>
 				</div>
 				<div class="mb-5">
 					<div class="form-check d-flex align-items-center">
