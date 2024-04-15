@@ -28,49 +28,48 @@ $(document).ready(function() {
             'Authorization': 'Bearer ' + localStorage.getItem('access_token'),
           },
           success: function(user) {
-            if(!user.default_region || !user.current_region){
-              $.ajax({
-                url: 'https://ipgeolocation.abstractapi.com/v1/?api_key=5eb6ef4c3b864eefac54dea464850087',
-                type: 'GET',
-                contentType: 'application/json',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                success: function(geoData) {
-                  const payload = {};
-                  if(!user.default_region){
-                    payload.default_region = geoData.region;
-                  }
-                  if(!user.current_region){
-                    payload.current_region = geoData.region;
-                  }
-                  $(document).ready(function() {
-                    $.ajax({
-                      url: 'https://yen-api-7d8c3d9f30f7.herokuapp.com/v1/profile',
-                      type: 'PATCH',
-                      contentType: 'application/json',
-                      data: JSON.stringify(payload),
-                      headers: {
-                        'Authorization': 'Bearer ' + localStorage.getItem('access_token'),
-                      },
-                      success: function(data) {
-                        setTimeout(function(){
-                          window.location.href = "https://www.yenebezpeka.pp.ua";
-                        }, 1000);
-                      },
-                      error: function(xhr, status, error) {
-                        console.error('Error:', xhr.responseJSON);
-                      }
-                    });
-                  });
-                },
-                error: function(xhr, status, error) {
-                  console.error('Error:', xhr.responseJSON);
+            $.ajax({
+              url: 'https://ipgeolocation.abstractapi.com/v1/?api_key=5eb6ef4c3b864eefac54dea464850087',
+              type: 'GET',
+              contentType: 'application/json',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              success: function(geoData) {
+                const payload = {
+                  current_region: geoData.region,
+                  current_city: geoData.city,
+                  current_country: geoData.country,
+                  current_latitude: geoData.latitude,
+                  current_longitude: geoData.longitude,
+                };
+                if(!user.default_region){
+                  payload.default_region = geoData.region;
                 }
-              });
-            } else {
-              window.location.href = "https://www.yenebezpeka.pp.ua";
-            }
+                $(document).ready(function() {
+                  $.ajax({
+                    url: 'https://yen-api-7d8c3d9f30f7.herokuapp.com/v1/profile',
+                    type: 'PATCH',
+                    contentType: 'application/json',
+                    data: JSON.stringify(payload),
+                    headers: {
+                      'Authorization': 'Bearer ' + localStorage.getItem('access_token'),
+                    },
+                    success: function(data) {
+                      setTimeout(function(){
+                        window.location.href = "https://www.yenebezpeka.pp.ua";
+                      }, 1000);
+                    },
+                    error: function(xhr, status, error) {
+                      console.error('Error:', xhr.responseJSON);
+                    }
+                  });
+                });
+              },
+              error: function(xhr, status, error) {
+                console.error('Error:', xhr.responseJSON);
+              }
+            });
           },
           error: function(xhr, status, error) {
             console.error('Error:', xhr.responseJSON);
