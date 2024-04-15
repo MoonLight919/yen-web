@@ -191,7 +191,11 @@
 							<input class="form-check-input me-3" type="checkbox" role="switch" id="air-quality-notification">
 							<label class="form-check-label fs-3" for="air-quality-notification">Air quality notifications</label>
 						</div>
-						<button type="button" class="btn btn-outline-light">Send notification with current information</button>
+						<button id="air-quality-test" type="button" class="btn btn-outline-light">Send notification with current information</button>
+						<button id="air-quality-test-loading" type="button" class="btn btn-outline-light" disabled>
+							<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+							<span role="status">Sending...</span>
+						</button>
 					</div>
 					<div>
 						<label for="air-quality-notification-trigger-value" class="form-label">Air quality trigger value</label>

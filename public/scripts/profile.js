@@ -2,6 +2,32 @@ $('#alerts-in-ua').hide();
 $('#iqair').hide();
 $('#test-phone-number-loading').hide();
 $('#alerts-in-ua-test-loading').hide();
+$('#air-quality-test-loading').hide();
+
+$('#air-quality-test').on('click', (e) => {
+  $('#air-quality-test').hide();
+  $('#air-quality-test-loading').show();
+  $(document).ready(function() {
+    $.ajax({
+      url: 'https://yen-api-7d8c3d9f30f7.herokuapp.com/v1/iqair/air-quality/current-information',
+      type: 'POST',
+      headers: {
+        'Authorization': 'Bearer ' + localStorage.getItem('access_token'),
+      },
+      error: function(xhr) {
+        console.error('Error:', xhr.responseJSON);
+        if(xhr.status === 401) {
+            localStorage.removeItem('access_token');
+            window.location.href = "https://www.yenebezpeka.pp.ua/authorize";
+        }
+      },
+      success: function(data) {
+        $('#air-quality-test').show();
+        $('#air-quality-test-loading').hide();
+      }
+    });
+  });    
+});
 
 $('#alerts-in-ua-test').on('click', (e) => {
   $('#alerts-in-ua-test').hide();
