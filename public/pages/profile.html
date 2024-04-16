@@ -238,8 +238,8 @@
 						<div>Pressure is measured in hectopascals (hPa). 1 atm = 1,013.25 hPa</div>
 						<ul>
 							<li>Over 1022.68 hPa (Anticyclone) - is generally considered high, and high pressure is associated with clear skies and calm weather</li>
-							<li>Over 1009.14 - 1022.68 hPa - can be considered normal, and normal pressure is associated with steady weather</li>
-							<li>Over 1009.14 hPa (Depression) - is generally considered low, and low pressure is associated with warm air and rainstorms</li>
+							<li>1009.14 - 1022.68 hPa - can be considered normal, and normal pressure is associated with steady weather</li>
+							<li>Under 1009.14 hPa (Depression) - is generally considered low, and low pressure is associated with warm air and rainstorms</li>
 						</ul>
 					</div>
 				</div>
@@ -297,17 +297,18 @@
 					<div>
 						<label for="weather-notification-trigger-type" class="form-label">Weather trigger type</label>
 						<select id="weather-notification-trigger-type" class="form-select">
-							<option value="1">Clear sky at the day</option>
-							<option value="2">Clear sky at the night</option>
-							<option value="3">Few clouds at the day</option>
-							<option value="4">Few clouds at the night</option>
-							<option value="5">Scattered clouds</option>
-							<option value="6">Broken clouds</option>
-							<option value="7">Shower rain</option>
-							<option value="8">Rain at the day time</option>
-							<option value="9">Rain at the night time</option>
-							<option value="10">Snow</option>
-							<option value="11">Mist</option>
+							<option value="01d">Clear sky at the day</option>
+							<option value="01n">Clear sky at the night</option>
+							<option value="02d">Few clouds at the day</option>
+							<option value="02n">Few clouds at the night</option>
+							<option value="03d">Scattered clouds</option>
+							<option value="04d">Broken clouds</option>
+							<option value="09d">Shower rain</option>
+							<option value="10d">Rain at the day time</option>
+							<option value="10n">Rain at the night time</option>
+							<option value="11d">Thunderstorm</option>
+							<option value="13d">Snow</option>
+							<option value="50d">Mist</option>
 						</select>
 						<ul>
 							<li><img src="../assets/weather/01d.png"> Clear sky at the day</li>
@@ -319,6 +320,7 @@
 							<li><img src="../assets/weather/09d.png"> Shower rain</li>
 							<li><img src="../assets/weather/10d.png"> Rain at the day time</li>
 							<li><img src="../assets/weather/10n.png"> Rain at the night time</li>
+							<li><img src="../assets/weather/11d.png"> Thunderstorm</li>
 							<li><img src="../assets/weather/13d.png"> Snow</li>
 							<li><img src="../assets/weather/50d.png"> Mist</li>
 						</ul>
