@@ -157,32 +157,34 @@
 				</div>
 			</div>
 			<div id="alerts-in-ua">
-				<div class="form-check form-switch d-flex align-items-center justify-content-between mb-3">
-					<div class="d-flex align-items-center">
-						<input class="form-check-input me-3" type="checkbox" role="switch" id="alerts-in-ua-notification">
-						<label class="form-check-label fs-3" for="alerts-in-ua-notification">Air raid alerts notifications</label>
+				<div class="box-with-border p-5 mb-3">
+					<div class="form-check form-switch d-flex align-items-center justify-content-between mb-3">
+						<div class="d-flex align-items-center">
+							<input class="form-check-input me-3" type="checkbox" role="switch" id="alerts-in-ua-notification">
+							<label class="form-check-label fs-3" for="alerts-in-ua-notification">Air raid alerts notifications</label>
+						</div>
+						<button id="alerts-in-ua-test" type="button" class="btn btn-outline-light">Send notification with current information</button>
+						<button id="alerts-in-ua-test-loading" type="button" class="btn btn-outline-light" disabled>
+							<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+							<span role="status">Sending...</span>
+						</button>
 					</div>
-					<button id="alerts-in-ua-test" type="button" class="btn btn-outline-light">Send notification with current information</button>
-					<button id="alerts-in-ua-test-loading" type="button" class="btn btn-outline-light" disabled>
-						<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
-						<span role="status">Sending...</span>
-					</button>
+					<div class="mb-5">
+						<div class="form-check d-flex align-items-center">
+							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="current-location-alerts-in-ua">
+							<label class="form-check-label fs-3" for="current-location-alerts-in-ua">
+								Current location
+							</label>
+						</div>
+						<div class="form-check d-flex align-items-center">
+							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="default-location-alerts-in-ua" checked>
+							<label class="form-check-label fs-3" for="default-location-alerts-in-ua">
+								Default location
+							</label>
+						</div>
+					</div>
+					<button type="button" class="btn btn-primary" id="save-alerts-in-ua">Save</button>
 				</div>
-				<div class="mb-5">
-					<div class="form-check d-flex align-items-center">
-						<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="current-location-alerts-in-ua">
-						<label class="form-check-label fs-3" for="current-location-alerts-in-ua">
-							Current location
-						</label>
-					</div>
-					<div class="form-check d-flex align-items-center">
-						<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="default-location-alerts-in-ua" checked>
-						<label class="form-check-label fs-3" for="default-location-alerts-in-ua">
-							Default location
-						</label>
-					</div>
-				</div>
-				<button type="button" class="btn btn-primary" id="save-alerts-in-ua">Save</button>
 			</div>
 			<div id="iqair">
 				<div class="box-with-border p-5 mb-3">
@@ -209,6 +211,21 @@
 							<li>301 and higher - Health warning of emergency conditions: everyone is more likely to be affected</li>
 						</ul>
 					</div>
+					<div class="mb-5">
+						<div class="form-check d-flex align-items-center">
+							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="current-location-air-quality-notification">
+							<label class="form-check-label fs-3" for="current-location-air-quality-notification">
+								Current location
+							</label>
+						</div>
+						<div class="form-check d-flex align-items-center">
+							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="default-location-air-quality-notification" checked>
+							<label class="form-check-label fs-3" for="default-location-air-quality-notification">
+								Default location
+							</label>
+						</div>
+					</div>
+					<button type="button" class="btn btn-primary" id="save-air-quality-notification">Save</button>
 				</div>
 				<div class="box-with-border p-5 mb-3">
 					<div class="form-check form-switch d-flex align-items-center justify-content-between mb-3">
@@ -227,6 +244,21 @@
 						<input type="number" id="air-temperature-notification-trigger-value" class="form-control w-50">
 						<div>Temperature is measured in Celsius</div>
 					</div>
+					<div class="mb-5">
+						<div class="form-check d-flex align-items-center">
+							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="current-location-air-temperature-notification">
+							<label class="form-check-label fs-3" for="current-location-air-temperature-notification">
+								Current location
+							</label>
+						</div>
+						<div class="form-check d-flex align-items-center">
+							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="default-location-air-temperature-notification" checked>
+							<label class="form-check-label fs-3" for="default-location-air-temperature-notification">
+								Default location
+							</label>
+						</div>
+					</div>
+					<button type="button" class="btn btn-primary" id="save-air-temperature-notification">Save</button>
 				</div>
 				<div class="box-with-border p-5 mb-3">
 					<div class="form-check form-switch d-flex align-items-center justify-content-between mb-3">
@@ -250,6 +282,21 @@
 							<li>Under 1009.14 hPa (Depression) - is generally considered low, and low pressure is associated with warm air and rainstorms</li>
 						</ul>
 					</div>
+					<div class="mb-5">
+						<div class="form-check d-flex align-items-center">
+							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="current-location-atmospheric-pressure-notification">
+							<label class="form-check-label fs-3" for="current-location-atmospheric-pressure-notification">
+								Current location
+							</label>
+						</div>
+						<div class="form-check d-flex align-items-center">
+							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="default-location-atmospheric-pressure-notification" checked>
+							<label class="form-check-label fs-3" for="default-location-atmospheric-pressure-notification">
+								Default location
+							</label>
+						</div>
+					</div>
+					<button type="button" class="btn btn-primary" id="save-atmospheric-pressure-notification">Save</button>
 				</div>
 				<div class="box-with-border p-5 mb-3">
 					<div class="form-check form-switch d-flex align-items-center justify-content-between mb-3">
@@ -265,9 +312,24 @@
 					</div>
 					<div>
 						<label for="humidity-notification-trigger-value" class="form-label">Humidity trigger value</label>
-						<input type="number" id="humidity-trigger-value" class="form-control w-50">
+						<input type="number" id="humidity-notification-trigger-value" class="form-control w-50">
 						<div>Humidity is measured in percentages (0% - 100%)</div>
 					</div>
+					<div class="mb-5">
+						<div class="form-check d-flex align-items-center">
+							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="current-location-humidity-notification">
+							<label class="form-check-label fs-3" for="current-location-humidity-notification">
+								Current location
+							</label>
+						</div>
+						<div class="form-check d-flex align-items-center">
+							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="default-location-humidity-notification" checked>
+							<label class="form-check-label fs-3" for="default-location-humidity-notification">
+								Default location
+							</label>
+						</div>
+					</div>
+					<button type="button" class="btn btn-primary" id="save-humidity-notification">Save</button>
 				</div>
 				<div class="box-with-border p-5 mb-3">
 					<div class="form-check form-switch d-flex align-items-center justify-content-between mb-3">
@@ -301,6 +363,21 @@
 							<li>Over 33 m/s (Hurricane Force) - Severe and extensive damage. Roofs can be peeled off. Windows broken. Trees uprooted. RVs and small mobile homes overturned. Moving automobiles can be pushed off the roadways</li>
 						</ul>
 					</div>
+					<div class="mb-5">
+						<div class="form-check d-flex align-items-center">
+							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="current-location-wind-speed-notification">
+							<label class="form-check-label fs-3" for="current-location-wind-speed-notification">
+								Current location
+							</label>
+						</div>
+						<div class="form-check d-flex align-items-center">
+							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="default-location-wind-speed-notification" checked>
+							<label class="form-check-label fs-3" for="default-location-wind-speed-notification">
+								Default location
+							</label>
+						</div>
+					</div>
+					<button type="button" class="btn btn-primary" id="save-wind-speed-notification">Save</button>
 				</div>
 				<div class="box-with-border p-5 mb-3">
 					<div class="form-check form-switch d-flex align-items-center justify-content-between mb-3">
@@ -345,22 +422,22 @@
 							<li><img src="../assets/weather/50d.png"> Mist</li>
 						</ul>
 					</div>
-				</div>
-				<div class="mb-5">
-					<div class="form-check d-flex align-items-center">
-						<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="current-location-iqair">
-						<label class="form-check-label fs-3" for="current-location-iqair">
-							Current location
-						</label>
+					<div class="mb-5">
+						<div class="form-check d-flex align-items-center">
+							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="current-location-weather-notification">
+							<label class="form-check-label fs-3" for="current-location-weather-notification">
+								Current location
+							</label>
+						</div>
+						<div class="form-check d-flex align-items-center">
+							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="default-location-weather-notification" checked>
+							<label class="form-check-label fs-3" for="default-location-weather-notification">
+								Default location
+							</label>
+						</div>
 					</div>
-					<div class="form-check d-flex align-items-center">
-						<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="default-location-iqair" checked>
-						<label class="form-check-label fs-3" for="default-location-iqair">
-							Default location
-						</label>
-					</div>
+					<button type="button" class="btn btn-primary" id="save-weather-notification">Save</button>
 				</div>
-				<button type="button" class="btn btn-primary" id="save-iqair">Save</button>
 			</div>
 			<div id="save-eco-bot">
 				<div class="box-with-border p-5 mb-3">
@@ -384,22 +461,22 @@
 							<li>Over 1200 nSv/h - dangerous level of the background radiation</li>
 						</ul>
 					</div>
-				</div>
-				<div class="mb-5">
-					<div class="form-check d-flex align-items-center">
-						<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="current-location-save-eco-bot">
-						<label class="form-check-label fs-3" for="current-location-save-eco-bot">
-							Current location
-						</label>
+					<div class="mb-5">
+						<div class="form-check d-flex align-items-center">
+							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="current-location-save-eco-bot">
+							<label class="form-check-label fs-3" for="current-location-save-eco-bot">
+								Current location
+							</label>
+						</div>
+						<div class="form-check d-flex align-items-center">
+							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="default-location-save-eco-bot" checked>
+							<label class="form-check-label fs-3" for="default-location-save-eco-bot">
+								Default location
+							</label>
+						</div>
 					</div>
-					<div class="form-check d-flex align-items-center">
-						<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="default-location-save-eco-bot" checked>
-						<label class="form-check-label fs-3" for="default-location-save-eco-bot">
-							Default location
-						</label>
-					</div>
+					<button type="button" class="btn btn-primary" id="save-save-eco-bot">Save</button>
 				</div>
-				<button type="button" class="btn btn-primary" id="save-save-eco-bot">Save</button>
 			</div>
 		</div>
 	</div>
