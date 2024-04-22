@@ -1,5 +1,6 @@
 $('#alerts-in-ua').hide();
 $('#iqair').hide();
+$('#save-eco-bot').hide();
 $('#test-phone-number-loading').hide();
 $('#alerts-in-ua-test-loading').hide();
 $('#air-quality-test-loading').hide();
@@ -8,6 +9,32 @@ $('#atmospheric-pressure-test-loading').hide();
 $('#humidity-test-loading').hide();
 $('#wind-speed-test-loading').hide();
 $('#weather-test-loading').hide();
+$('#save-eco-bot-test-loading').hide();
+
+$('#save-eco-bot-test').on('click', (e) => {
+  $('#save-eco-bot-test').hide();
+  $('#save-eco-bot-test-loading').show();
+  $(document).ready(function() {
+    $.ajax({
+      url: 'https://yen-api-7d8c3d9f30f7.herokuapp.com/v1/save-eco-bot/current-information',
+      type: 'POST',
+      headers: {
+        'Authorization': 'Bearer ' + localStorage.getItem('access_token'),
+      },
+      error: function(xhr) {
+        console.error('Error:', xhr.responseJSON);
+        if(xhr.status === 401) {
+            localStorage.removeItem('access_token');
+            window.location.href = "https://www.yenebezpeka.pp.ua/authorize";
+        }
+      },
+      success: function(data) {
+        $('#save-eco-bot-test').show();
+        $('#save-eco-bot-test-loading').hide();
+      }
+    });
+  });    
+});
 
 $('#weather-test').on('click', (e) => {
   $('#weather-test').hide();
@@ -188,25 +215,29 @@ $('#alerts-in-ua-test').on('click', (e) => {
 $('#btnradio1').on('change', (e) => {
     $('#general-information').show();
     $('#alerts-in-ua').hide();
-    $('#iqair').hide
+    $('#iqair').hide();
+    $('#save-eco-bot').hide();
 });
 
 $('#btnradio2').on('change', (e) => {
     $('#general-information').hide();
     $('#alerts-in-ua').show();
     $('#iqair').hide();
+    $('#save-eco-bot').hide();
 });
 
 $('#btnradio3').on('change', (e) => {
     $('#general-information').hide();
     $('#alerts-in-ua').hide();
     $('#iqair').show();
+    $('#save-eco-bot').hide();
 });
 
 $('#btnradio4').on('change', (e) => {
     $('#general-information').hide();
     $('#alerts-in-ua').hide();
     $('#iqair').hide();
+    $('#save-eco-bot').show();
 });
 
 $('#test-phone-number').on('click', (e) => {

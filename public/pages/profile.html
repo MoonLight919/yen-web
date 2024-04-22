@@ -360,7 +360,46 @@
 						</label>
 					</div>
 				</div>
-				<button type="button" class="btn btn-primary" id="save-alerts-in-ua">Save</button>
+				<button type="button" class="btn btn-primary" id="save-iqair">Save</button>
+			</div>
+			<div id="save-eco-bot">
+				<div class="box-with-border p-5 mb-3">
+					<div class="form-check form-switch d-flex align-items-center justify-content-between mb-3">
+						<div class="d-flex align-items-center">
+							<input class="form-check-input me-3" type="checkbox" role="switch" id="save-eco-bot-notification">
+							<label class="form-check-label fs-3" for="save-eco-bot-notification">Radiation level notifications</label>
+						</div>
+						<button id="save-eco-bot-test" type="button" class="btn btn-outline-light">Send notification with current information</button>
+						<button id="save-eco-bot-test-loading" type="button" class="btn btn-outline-light" disabled>
+							<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+							<span role="status">Sending...</span>
+						</button>
+					</div>
+					<div>
+						<label for="save-eco-bot-notification-trigger-value" class="form-label">Radiation level trigger value</label>
+						<input type="number" id="save-eco-bot-notification-trigger-value" class="form-control w-50" min="0">
+						<ul>
+							<li>Up to 260 nSv/h - safe level of the background radiation</li>
+							<li>260 - 1200 nSv/h - increased level of the background radiation</li>
+							<li>Over 1200 nSv/h - dangerous level of the background radiation</li>
+						</ul>
+					</div>
+				</div>
+				<div class="mb-5">
+					<div class="form-check d-flex align-items-center">
+						<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="current-location-save-eco-bot">
+						<label class="form-check-label fs-3" for="current-location-save-eco-bot">
+							Current location
+						</label>
+					</div>
+					<div class="form-check d-flex align-items-center">
+						<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="default-location-save-eco-bot" checked>
+						<label class="form-check-label fs-3" for="default-location-save-eco-bot">
+							Default location
+						</label>
+					</div>
+				</div>
+				<button type="button" class="btn btn-primary" id="save-save-eco-bot">Save</button>
 			</div>
 		</div>
 	</div>
