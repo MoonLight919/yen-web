@@ -171,19 +171,23 @@
 					</div>
 					<div class="mb-5">
 						<div class="form-check d-flex align-items-center">
-							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="current-location-alerts-in-ua">
+							<input class="form-check-input me-3" type="radio" name="alerts-in-ua-radio" id="current-location-alerts-in-ua">
 							<label class="form-check-label fs-3" for="current-location-alerts-in-ua">
 								Current location
 							</label>
 						</div>
 						<div class="form-check d-flex align-items-center">
-							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="default-location-alerts-in-ua" checked>
+							<input class="form-check-input me-3" type="radio" name="alerts-in-ua-radio" id="default-location-alerts-in-ua" checked>
 							<label class="form-check-label fs-3" for="default-location-alerts-in-ua">
 								Default location
 							</label>
 						</div>
 					</div>
 					<button type="button" class="btn btn-primary" id="save-alerts-in-ua">Save</button>
+					<button id="save-alerts-in-ua-loading" type="button" class="btn btn-primary" disabled>
+						<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+						<span role="status">Sending...</span>
+					</button>
 				</div>
 			</div>
 			<div id="iqair">
@@ -213,19 +217,23 @@
 					</div>
 					<div class="mb-5">
 						<div class="form-check d-flex align-items-center">
-							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="current-location-air-quality-notification">
-							<label class="form-check-label fs-3" for="current-location-air-quality-notification">
+							<input class="form-check-input me-3" type="radio" name="air-quality-radio" id="current-location-air-quality">
+							<label class="form-check-label fs-3" for="current-location-air-quality">
 								Current location
 							</label>
 						</div>
 						<div class="form-check d-flex align-items-center">
-							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="default-location-air-quality-notification" checked>
-							<label class="form-check-label fs-3" for="default-location-air-quality-notification">
+							<input class="form-check-input me-3" type="radio" name="air-quality-radio" id="default-location-air-quality" checked>
+							<label class="form-check-label fs-3" for="default-location-air-quality">
 								Default location
 							</label>
 						</div>
 					</div>
-					<button type="button" class="btn btn-primary" id="save-air-quality-notification">Save</button>
+					<button type="button" class="btn btn-primary" id="save-air-quality">Save</button>
+					<button id="save-air-quality-loading" type="button" class="btn btn-primary" disabled>
+						<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+						<span role="status">Sending...</span>
+					</button>
 				</div>
 				<div class="box-with-border p-5 mb-3">
 					<div class="form-check form-switch d-flex align-items-center justify-content-between mb-3">
@@ -246,19 +254,23 @@
 					</div>
 					<div class="mb-5">
 						<div class="form-check d-flex align-items-center">
-							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="current-location-air-temperature-notification">
-							<label class="form-check-label fs-3" for="current-location-air-temperature-notification">
+							<input class="form-check-input me-3" type="radio" name="air-temperature-radio" id="current-location-air-temperature">
+							<label class="form-check-label fs-3" for="current-location-air-temperature">
 								Current location
 							</label>
 						</div>
 						<div class="form-check d-flex align-items-center">
-							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="default-location-air-temperature-notification" checked>
-							<label class="form-check-label fs-3" for="default-location-air-temperature-notification">
+							<input class="form-check-input me-3" type="radio" name="air-temperature-radio" id="default-location-air-temperature" checked>
+							<label class="form-check-label fs-3" for="default-location-air-temperature">
 								Default location
 							</label>
 						</div>
 					</div>
-					<button type="button" class="btn btn-primary" id="save-air-temperature-notification">Save</button>
+					<button type="button" class="btn btn-primary" id="save-air-temperature">Save</button>
+					<button id="save-air-temperature-loading" type="button" class="btn btn-primary" disabled>
+						<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+						<span role="status">Sending...</span>
+					</button>
 				</div>
 				<div class="box-with-border p-5 mb-3">
 					<div class="form-check form-switch d-flex align-items-center justify-content-between mb-3">
@@ -284,19 +296,23 @@
 					</div>
 					<div class="mb-5">
 						<div class="form-check d-flex align-items-center">
-							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="current-location-atmospheric-pressure-notification">
-							<label class="form-check-label fs-3" for="current-location-atmospheric-pressure-notification">
+							<input class="form-check-input me-3" type="radio" name="atmospheric-pressure-radio" id="current-location-atmospheric-pressure">
+							<label class="form-check-label fs-3" for="current-location-atmospheric-pressure">
 								Current location
 							</label>
 						</div>
 						<div class="form-check d-flex align-items-center">
-							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="default-location-atmospheric-pressure-notification" checked>
-							<label class="form-check-label fs-3" for="default-location-atmospheric-pressure-notification">
+							<input class="form-check-input me-3" type="radio" name="atmospheric-pressure-radio" id="default-location-atmospheric-pressure" checked>
+							<label class="form-check-label fs-3" for="default-location-atmospheric-pressure">
 								Default location
 							</label>
 						</div>
 					</div>
-					<button type="button" class="btn btn-primary" id="save-atmospheric-pressure-notification">Save</button>
+					<button type="button" class="btn btn-primary" id="save-atmospheric-pressure">Save</button>
+					<button id="save-atmospheric-pressure-loading" type="button" class="btn btn-primary" disabled>
+						<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+						<span role="status">Sending...</span>
+					</button>
 				</div>
 				<div class="box-with-border p-5 mb-3">
 					<div class="form-check form-switch d-flex align-items-center justify-content-between mb-3">
@@ -317,19 +333,23 @@
 					</div>
 					<div class="mb-5">
 						<div class="form-check d-flex align-items-center">
-							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="current-location-humidity-notification">
-							<label class="form-check-label fs-3" for="current-location-humidity-notification">
+							<input class="form-check-input me-3" type="radio" name="humidity-radio" id="current-location-humidity">
+							<label class="form-check-label fs-3" for="current-location-humidity">
 								Current location
 							</label>
 						</div>
 						<div class="form-check d-flex align-items-center">
-							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="default-location-humidity-notification" checked>
-							<label class="form-check-label fs-3" for="default-location-humidity-notification">
+							<input class="form-check-input me-3" type="radio" name="humidity-radio" id="default-location-humidity" checked>
+							<label class="form-check-label fs-3" for="default-location-humidity">
 								Default location
 							</label>
 						</div>
 					</div>
-					<button type="button" class="btn btn-primary" id="save-humidity-notification">Save</button>
+					<button type="button" class="btn btn-primary" id="save-humidity">Save</button>
+					<button id="save-humidity-loading" type="button" class="btn btn-primary" disabled>
+						<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+						<span role="status">Sending...</span>
+					</button>
 				</div>
 				<div class="box-with-border p-5 mb-3">
 					<div class="form-check form-switch d-flex align-items-center justify-content-between mb-3">
@@ -365,19 +385,23 @@
 					</div>
 					<div class="mb-5">
 						<div class="form-check d-flex align-items-center">
-							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="current-location-wind-speed-notification">
-							<label class="form-check-label fs-3" for="current-location-wind-speed-notification">
+							<input class="form-check-input me-3" type="radio" name="wind-speed-radio" id="current-location-wind-speed">
+							<label class="form-check-label fs-3" for="current-location-wind-speed">
 								Current location
 							</label>
 						</div>
 						<div class="form-check d-flex align-items-center">
-							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="default-location-wind-speed-notification" checked>
-							<label class="form-check-label fs-3" for="default-location-wind-speed-notification">
+							<input class="form-check-input me-3" type="radio" name="wind-speed-radio" id="default-location-wind-speed" checked>
+							<label class="form-check-label fs-3" for="default-location-wind-speed">
 								Default location
 							</label>
 						</div>
 					</div>
-					<button type="button" class="btn btn-primary" id="save-wind-speed-notification">Save</button>
+					<button type="button" class="btn btn-primary" id="save-wind-speed">Save</button>
+					<button id="save-wind-speed-loading" type="button" class="btn btn-primary" disabled>
+						<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+						<span role="status">Sending...</span>
+					</button>
 				</div>
 				<div class="box-with-border p-5 mb-3">
 					<div class="form-check form-switch d-flex align-items-center justify-content-between mb-3">
@@ -424,37 +448,41 @@
 					</div>
 					<div class="mb-5">
 						<div class="form-check d-flex align-items-center">
-							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="current-location-weather-notification">
-							<label class="form-check-label fs-3" for="current-location-weather-notification">
+							<input class="form-check-input me-3" type="radio" name="weather-radio" id="current-location-weather">
+							<label class="form-check-label fs-3" for="current-location-weather">
 								Current location
 							</label>
 						</div>
 						<div class="form-check d-flex align-items-center">
-							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="default-location-weather-notification" checked>
-							<label class="form-check-label fs-3" for="default-location-weather-notification">
+							<input class="form-check-input me-3" type="radio" name="weather-radio" id="default-location-weather" checked>
+							<label class="form-check-label fs-3" for="default-location-weather">
 								Default location
 							</label>
 						</div>
 					</div>
-					<button type="button" class="btn btn-primary" id="save-weather-notification">Save</button>
+					<button type="button" class="btn btn-primary" id="save-weather">Save</button>
+					<button id="save-weather-loading" type="button" class="btn btn-primary" disabled>
+						<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+						<span role="status">Sending...</span>
+					</button>
 				</div>
 			</div>
-			<div id="save-eco-bot">
+			<div id="radiation">
 				<div class="box-with-border p-5 mb-3">
 					<div class="form-check form-switch d-flex align-items-center justify-content-between mb-3">
 						<div class="d-flex align-items-center">
-							<input class="form-check-input me-3" type="checkbox" role="switch" id="save-eco-bot-notification">
-							<label class="form-check-label fs-3" for="save-eco-bot-notification">Radiation level notifications</label>
+							<input class="form-check-input me-3" type="checkbox" role="switch" id="radiation-notification">
+							<label class="form-check-label fs-3" for="radiation-notification">Radiation level notifications</label>
 						</div>
-						<button id="save-eco-bot-test" type="button" class="btn btn-outline-light">Send notification with current information</button>
-						<button id="save-eco-bot-test-loading" type="button" class="btn btn-outline-light" disabled>
+						<button id="radiation-test" type="button" class="btn btn-outline-light">Send notification with current information</button>
+						<button id="radiation-test-loading" type="button" class="btn btn-outline-light" disabled>
 							<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
 							<span role="status">Sending...</span>
 						</button>
 					</div>
 					<div>
-						<label for="save-eco-bot-notification-trigger-value" class="form-label">Radiation level trigger value</label>
-						<input type="number" id="save-eco-bot-notification-trigger-value" class="form-control w-50" min="0">
+						<label for="radiation-notification-trigger-value" class="form-label">Radiation level trigger value</label>
+						<input type="number" id="radiation-notification-trigger-value" class="form-control w-50" min="0">
 						<ul>
 							<li>Up to 260 nSv/h - safe level of the background radiation</li>
 							<li>260 - 1200 nSv/h - increased level of the background radiation</li>
@@ -463,19 +491,23 @@
 					</div>
 					<div class="mb-5">
 						<div class="form-check d-flex align-items-center">
-							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="current-location-save-eco-bot">
-							<label class="form-check-label fs-3" for="current-location-save-eco-bot">
+							<input class="form-check-input me-3" type="radio" name="radiation-radio" id="current-location-radiation">
+							<label class="form-check-label fs-3" for="current-location-radiation">
 								Current location
 							</label>
 						</div>
 						<div class="form-check d-flex align-items-center">
-							<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="default-location-save-eco-bot" checked>
-							<label class="form-check-label fs-3" for="default-location-save-eco-bot">
+							<input class="form-check-input me-3" type="radio" name="radiation-radio" id="default-location-radiation" checked>
+							<label class="form-check-label fs-3" for="default-location-radiation">
 								Default location
 							</label>
 						</div>
 					</div>
-					<button type="button" class="btn btn-primary" id="save-save-eco-bot">Save</button>
+					<button type="button" class="btn btn-primary" id="save-radiation">Save</button>
+					<button id="save-radiation-loading" type="button" class="btn btn-primary" disabled>
+						<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+						<span role="status">Sending...</span>
+					</button>
 				</div>
 			</div>
 		</div>
